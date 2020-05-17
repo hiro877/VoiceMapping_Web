@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>Voice Mapping</title>
-</head>
-<body>
-    <h1>Voice Mapping</h1>
-</body>
-</html>
+<!--<!DOCTYPE html>-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Web上にあなた専用の日記ページを保存できるサービス | Private Diary{% endblock %}
+
+{% block header %}
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container">
+            <h1 class="masthead-heading mb-0">Voice MAP</h1>
+            <h2 class="masthead-subheading mb-0">声の地図を作成します</h2>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/01.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Voice MAP</h2>
+                    <p>声優さんのVoiceMapを使用し、似ている声を探せます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/02.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Voice Mapping</h2>
+                    <p>あなたの声質を地図に追加します</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/03.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">こえまねトレーニング！</h2>
+                    <p>目標のVoiceMap付近になるまで練習しましょう！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+<!--<html lang="ja">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>トップページ</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Hello World</h1>-->
+<!--</body>-->
+<!--</html>-->
