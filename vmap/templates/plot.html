@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Voice Mapping{% endblock %}
+
+{% block active_vmap %}active{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="my-div-style">
+            <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.as_p }}
+            {% csrf_token %}
+                <button type="submit">送信</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contents_plot %}
+    <img src="{% url 'vmap:img_plot' %}" alt="">
+{% endblock %}

@@ -74,18 +74,17 @@ WSGI_APPLICATION = 'voice_mapping.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-ATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "private_diary",
+        'NAME': "voice_mapping",
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'POST': '',
-
     }
 }
+
 
 
 # Password validation

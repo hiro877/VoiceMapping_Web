@@ -71,6 +71,48 @@
     </div>
 </section>
 {% endblock %}
+
+{% block contents_plot %}
+    <img src="/media/moka.jpg" width="100%" height="100%" border="0" />
+
+    <canvas id="radar-chart" height="500px"></canvas>
+    <script type="text/javascript">
+    var ctx = document.getElementById("radar-chart");
+    var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['国語', '算数', '理科', '社会', '英語'],
+            datasets: [
+                {   label: "{{ person1.name }}",
+                    data: ['{{ person1.japanese }}', '{{ person1.math }}', '{{ person1.science }}', '{{ person1.social }}', '{{ person1.english }}'],
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 0.9)',
+                    pointBackgroundColor: 'rgba(255, 99, 132, 0.9)',
+                    pointBorderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 3,
+                    pointRadius: 3,
+                },{
+                    label: "{{ person2.name }}",
+                    data: ['{{ person2.japanese }}', '{{ person2.math }}', '{{ person2.science }}', '{{ person2.social }}', '{{ person2.english }}'],
+                    backgroundColor: 'rgba(0, 0, 255, 0.6)',
+                    borderColor: 'rgba(0, 0, 255, 0.9)',
+                    pointBackgroundColor: 'rgba(0, 0, 255, 0.9)',
+                    pointBorderColor: 'rgba(0, 0, 255, 1)',
+                    borderWidth: 3,
+                    pointRadius: 3,
+                }]},
+        options : {
+            scale: {
+                ticks: {
+                    min: 50,
+                    max: 100,
+                    stepSize: 5,
+                    backdropColor: 'rgba(255, 255, 255, 0)',
+                }}}
+    });
+    </script>
+{% endblock %}
+
 <!--<html lang="ja">-->
 <!--<head>-->
 <!--    <meta charset="UTF-8">-->
