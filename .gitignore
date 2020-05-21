@@ -3,3 +3,4 @@
 media/
 static/
 *.pyc
+*.DS_Store
