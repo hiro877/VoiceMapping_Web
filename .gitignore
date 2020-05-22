@@ -1,6 +1,6 @@
 
 .idea/
 media/
-static/
 *.pyc
 *.DS_Store
+vmap/.DS_Store
